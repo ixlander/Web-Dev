@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS descendant selectors</title>
+        <style>
+            .orange {
+                background-color: orange;
+            }
+            
+            .yellow {
+                background-color: yellow;
+            }
+            
+            .purple {
+                background-color: purple;
+                color: white;
+            }
+            
+            p .purple {
+                color: purple;
+                background-color: transparent;
+            }
+            
+            ul.spacey li strong {
+                line-height: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Carrot Facts</h1>
+        
+        <p>Colors that carrots come in:</p>
+        <ul class="spacey">
+            <li>
+                <strong class="orange">Orange</strong>
+            </li>
+            <li>
+                <strong class="purple">Purple</strong>
+            </li>
+            <li>
+                <strong class="yellow">Yellow</strong>
+            </li>
+        </ul>
+        
+        <p>Did you know? Carrots were <strong class="purple">purple</strong> before the 17th century, but then were cultivated by Dutch farmers until they became the sweet orange carrots that we know today.</p>
+
+    </body>
+</html>
