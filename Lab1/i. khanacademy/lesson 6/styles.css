@@ -1,0 +1,111 @@
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+background-color: #ffffff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+header {
+text-align: center;
+padding: 20px 0;
+background-color: #3498db;
+color: #ffffff;
+}
+
+h1 {
+font-size: 2.5em;
+margin-bottom: 10px;
+}
+
+h2 {
+font-size: 1.8em;
+margin-top: 0;
+}
+
+
+main {
+padding: 20px;
+}
+
+section {
+margin-bottom: 30px;
+}
+
+h3 {
+color: #2c3e50;
+border-bottom: 2px solid #3498db;
+padding-bottom: 5px;
+}
+
+ul {
+list-style-type: none;
+padding-left: 0;
+}
+
+li {
+margin-bottom: 10px;
+}
+
+.rsvp {
+text-align: center;
+background-color: #ecf0f1;
+padding: 20px;
+border-radius: 5px;
+}
+
+.rsvp-button {
+background-color: #2ecc71;
+color: #ffffff;
+border: none;
+padding: 10px 20px;
+font-size: 1.2em;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.rsvp-button:hover {
+background-color: #27ae60;
+}
+
+.deadline {
+font-style: italic;
+color: #7f8c8d;
+margin-top: 10px;
+}
+
+footer {
+text-align: center;
+padding: 10px;
+background-color: #34495e;
+color: #ffffff;
+}
+
+footer a {
+color: #3498db;
+}
+
+@media (max-width: 600px) {
+.container {
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+}
