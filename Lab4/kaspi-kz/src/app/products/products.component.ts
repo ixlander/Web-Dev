@@ -10,6 +10,7 @@ interface Product {
   rating: number;
   price: string;
   link: string;
+  isDialogOpen?: boolean;  // Add this new property
 }
 
 @Component({

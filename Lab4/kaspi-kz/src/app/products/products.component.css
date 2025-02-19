@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+
+.welcome-banner {
+  background: linear-gradient(45deg, #ffffff, #f8f9fa);
+  color: #2d3436;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid #00c3ff;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.2);
+}
+
+.welcome-banner h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0, 195, 255, 0.3);
+  animation: glitch 3s infinite;
+  letter-spacing: 1px;
+}
+
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 195, 255, 0.2), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+  100% { transform: translate(0) }
+}
+
 .products-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -5,22 +57,24 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #f5f5f5;
+  font-family: 'Outfit', sans-serif;
 }
 
 .product-card {
   background: white;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 195, 255, 0.1);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(0, 195, 255, 0.2);
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 195, 255, 0.2);
+  border-color: rgba(0, 195, 255, 0.4);
 }
 
 .product-gallery {
@@ -29,123 +83,7 @@
   border-radius: 8px;
   aspect-ratio: 1;
   margin-bottom: 15px;
-}
-
-.main-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.thumbnail-container {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.thumbnail {
-  width: 50px;
-  height: 50px;
-  border-radius: 6px;
-  object-fit: cover;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.thumbnail:hover {
-  border-color: #007bff;
-  transform: scale(1.1);
-}
-
-.product-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-  color: #333;
-}
-
-.description {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #ffa41c;
-  font-weight: 500;
-}
-
-.product-link {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 0;
-  transition: color 0.2s ease;
-}
-
-.product-link:hover {
-  color: #0056b3;
-}
-
-.share-buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: auto;
-}
-
-.share-button {
-  flex: 1;
-  padding: 8px;
-  border: none;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.telegram-button {
-  background-color: #0088cc;
-  color: white;
-}
-
-.whatsapp-button {
-  background-color: #25d366;
-  color: white;
-}
-
-.share-button:hover {
-  filter: brightness(1.1);
-  transform: translateY(-2px);
-}
-
-.price {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2ecc71;
-  margin: 8px 0;
-}
-
-.active {
-  border-color: #007bff;
-  transform: scale(1.1);
+  border: 1px solid rgba(0, 195, 255, 0.2);
 }
 
 .main-image-container {
@@ -169,32 +107,6 @@ h3 {
   transform: scale(1.05);
 }
 
-.nav-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 2;
-  transition: background-color 0.3s ease;
-  border-radius: 4px;
-}
-
-.nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
 .thumbnail-container {
   display: flex;
   gap: 8px;
@@ -216,21 +128,154 @@ h3 {
 
 .thumbnail:hover {
   opacity: 1;
+  border-color: #00c3ff;
 }
 
 .thumbnail.active {
-  border-color: #007bff;
+  border-color: #00c3ff;
   opacity: 1;
+  transform: scale(1.1);
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #2d3436;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 300;
+}
+
+.rating {
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffa41c;
+  font-weight: 500;
+}
+
+.price {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ff0099;
+  margin: 8px 0;
+  text-shadow: 0 0 5px rgba(255, 0, 153, 0.2);
+  letter-spacing: 0.5px;
+}
+
+.product-link {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #00c3ff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  border: 1px solid #00c3ff;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.product-link:hover {
+  background: #00c3ff;
+  color: white;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.share-button {
+  font-family: 'Space Grotesk', sans-serif;
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.telegram-button {
+  background-color: #0088cc;
+  color: white;
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+  color: white;
+}
+
+.share-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 195, 255, 0.1);
+  color: #00c3ff;
+  border: 1px solid #00c3ff;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 12px; 
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 195, 255, 0.2);
+}
+
+.prev {
+  left: 5px; 
+}
+
+.next {
+  right: 5px;
 }
 
 .image-counter {
+  font-family: 'Space Grotesk', sans-serif;
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #00c3ff;
   padding: 4px 8px;
   border-radius: 12px;
   font-size: 0.8rem;
   z-index: 2;
+  border: 1px solid #00c3ff;
+  letter-spacing: 0.5px;
 }
