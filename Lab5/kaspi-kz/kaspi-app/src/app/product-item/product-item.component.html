@@ -1,0 +1,33 @@
+<div class="product-card">
+    <img [src]="product.image" alt="{{ product.name }}" class="product-image">
+    
+    <div class="product-info">
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-description">{{ product.description }}</p>
+      
+      <div class="product-meta">
+        <div class="product-rating">
+          <span>⭐ {{ product.rating }}</span>
+        </div>
+        <div class="product-likes">
+          <span>❤️ {{ product.likes }}</span>
+        </div>
+        <div class="product-price">
+          <span> {{ product.price }}</span>
+        </div>
+      </div>
+      
+      <div class="product-actions">
+        <button (click)="likeProduct()" class="like-button">
+          ❤️ Like
+        </button>
+        <button (click)="shareProduct()" class="share-button">
+          📤 Share
+        </button>
+        
+        <button (click)="removeProduct()" class="remove-button">
+            🗑️ Remove
+        </button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<!-- In app.component.html -->
+<div class="container">
+  <div class="header-controls">
+    <div class="category-nav">
+      <button 
+        *ngFor="let category of categories" 
+        (click)="selectCategory(category)"
+        class="category-button"
+        [class.active]="selectedCategory?.id === category.id">
+        {{ category.name }}
+      </button>
+    </div>
+    
+    <app-search (searchResults)="handleSearchResults($event)"></app-search>
+  </div>
+
+  <!-- Show search results if available -->
+  <div *ngIf="isSearchMode">
+    <h2>Результаты поиска</h2>
+    <div class="products-container">
+      <app-product-item 
+        *ngFor="let product of searchResults" 
+        [product]="product">
+      </app-product-item>
+    </div>
+  </div>
+
+  <!-- Show category products if not in search mode -->
+  <app-product-list 
+    *ngIf="selectedCategory && !isSearchMode" 
+    [category]="selectedCategory">
+  </app-product-list>
+</div>

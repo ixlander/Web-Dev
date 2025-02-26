@@ -1,0 +1,70 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+h1 {
+    color: #2c3e50;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 2.5rem;
+}
+  
+.header-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* Выровняет поле поиска и категории */
+    margin: 20px 0;
+}
+  
+.category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-grow: 1; /* Растягивает категории */
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+  
+.category-button {
+    padding: 10px 20px;
+    background-color: #444741;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+  
+.category-button:hover {
+    background-color: #60696f;
+    transform: translateY(-2px);
+}
+  
+.category-button.active {
+    background-color: #2c3e50;
+}
+ 
+
+@media (max-width: 768px) {
+    .header-controls {
+      flex-direction: column;
+    }
+    
+    .category-nav {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+    app-search {
+      width: 100%;
+    }
+}
