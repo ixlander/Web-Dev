@@ -1,0 +1,100 @@
+.album-detail-container {
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .loading, .error {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border-radius: 5px;
+  }
+  
+  .album-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-row {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+  
+  .label {
+    font-weight: bold;
+    width: 100px;
+    color: #555;
+  }
+  
+  .edit-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .title-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .save-btn, .back-btn, .photos-link {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .save-btn:hover {
+    background-color: #218838;
+  }
+  
+  .save-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .back-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .back-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  .photos-link {
+    background-color: #007bff;
+    color: white;
+    display: inline-block;
+  }
+  
+  .photos-link:hover {
+    background-color: #0069d9;
+}
